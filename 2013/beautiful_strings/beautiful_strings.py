@@ -12,7 +12,6 @@ def beauty_val(beauty_string):
 	# Get count for each unique character
 	counter = collections.Counter(beauty_string)
 	counter_list = sorted(counter.values(), reverse=True)
-	#multiples = range(0, len(counter_list)-1)
 	return sum([x * (26 - n) for x,n in zip(counter_list, range(0,len(counter_list)))])
 
 case_count = 1
